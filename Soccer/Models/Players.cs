@@ -6,7 +6,7 @@ namespace Soccer.Models
         public string? Name { get; set; }
         public int Age { get; set; }
         public string? Position { get; set; }
-        public int TeamId { get; set; }
+        public int TeamId { get; set; } // це поле потрібно для комбобокса з назвами команд
         public Teams? Team { get; set; }
     }
 }
