@@ -43,7 +43,7 @@ namespace Soccer.Controllers
         // GET: Players/Create
         public IActionResult Create()
         {
-            ViewData["TeamId"] = new SelectList(_context.Teams, "Id", "Name");
+            ViewData["TeamId"] = new SelectList(_context.Teams, "Id", "Name"); // на вью передається команда гравця
             return View();
         }
 
@@ -78,6 +78,7 @@ namespace Soccer.Controllers
             {
                 return NotFound();
             }
+            // редагування гравця показує команду, в якій він грає, в списку треба обрати відповідний пункт
             ViewData["TeamId"] = new SelectList(_context.Teams, "Id", "Name", players.TeamId);
             return View(players);
         }
